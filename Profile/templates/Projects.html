@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+
+<!-- navbar  styling -->
+<style>
+body{margin: 0;}
+
+#wave{
+  width: 100vw;
+  margin-top: 600px;
+}
+#topcont{
+  background:url("/static/image/toggle3.jpeg");
+  background-size: cover;
+  background-position: left;
+  position: absolute;
+  height:1000px;
+  width:100%;
+}
+ul.topbar    /* all the topbar*/    
+{
+    background-color: #333;
+    list-style-type: none;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+}
+li.logo{float: left;
+    display:block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;}
+a.left{float: left;}          
+a.right{float:right;}
+ul.topbar li a 
+{
+    display:block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* hover and active*/
+a:hover {background-color:black;}
+a:active {background-color: green;}
+@media screen and (max-width:600px){
+    li.logo{float:none;}
+    a.right{float: none;}
+    a.left{float: none;}
+    #wave{
+      display: none;
+    }
+}
+/* Animations */
+#rectangle {
+  position: relative;
+  float: left;
+  margin: auto;
+  font-size: 18px;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+#rectangle > span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color:white;
+  border-left: 1px solid transparent;
+  animation: Fwrite 10s steps(14, start) infinite, Wbar 5s step-end infinite;
+    -webkit-animation: Fwrite 5s steps(14, start) infinite, Wbar 5s step-end infinite;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#rectangle > p:hover {
+  animation-play-state: paused;
+}
+
+@keyframes Fwrite {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes Wbar {
+  0% {
+    border-left-color: transparent;
+  }
+  50% {
+    border-left-color: black;
+  }
+  100% {
+    border-left-color: transparent;
+  }
+}
+
+#top{
+  overflow: hidden;
+  width:100%;
+}
+/*  */
+
+
+/* responsive media screens */
+
+@media screen and (max-width:1577px){
+  #topcont{
+    width:100%;
+    margin:0;
+    background-position:right;
+    height: 600px;
+  }
+  #wave{
+    margin-top:255px;
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 1342px){
+  #wave{margin-top: 300px;}
+}
+@media screen and (max-width: 1130px){
+  #wave{margin-top: 360px;}
+}
+@media screen and (max-width: 862px){
+  #wave{margin-top: 420px;}
+}
+/*  */
+</style>
+
+<script>
+</script>
+
+<!-- navbar styling ends -->
+</head>
+<body>
+    <!-- Navbar starts -->
+    <ul class="topbar">
+        <li class="logo"><strong><b>My Profile</b></strong></li>
+        <li><a href="/" class="left">Main</a></li>
+        <li><a href="" class="left">Contact Me</a></li>
+        <li><a href="#" class="right">Login</a></li>               
+        <li><a href="#" class="right">Register</a></li>                
+    </ul>
+    <!-- navbar ends -->
+    <!-- Projects.html -->
+    <div class="container" id="topcont">
+      <div class="textclass">
+        <p><span style="text-align: center;"><h1>Projects</h1></span></p>
+      </div>  
+      <svg xmlns="http://www.w3.org/2000/svg" id="wave" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,96L40,106.7C80,117,160,139,240,170.7C320,203,400,245,480,250.7C560,256,640,224,720,213.3C800,203,880,213,960,224C1040,235,1120,245,1200,245.3C1280,245,1360,235,1400,229.3L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+    </div>
+
+
+
+</body>
+</html>
